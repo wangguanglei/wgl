@@ -1,0 +1,25 @@
+
+
+spring:
+  application:
+    # ������
+    name: service-02
+  cloud:
+    nacos:
+      discovery:
+        # ����ע������
+        server-addr: 119.3.62.74:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        prefix: ${spring.application.name}
+        file-extension: yml
+        group: DEV_GROUP
+
+
+
+management:
+  # �˵��飨������飩
+  endpoints:
+    web:
+      exposure:
+        include: "*"

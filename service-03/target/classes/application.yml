@@ -1,0 +1,30 @@
+
+spring:
+  application:
+    # ������
+    name: service-01
+  cloud:
+    nacos:
+      # ����ע������
+      discovery:
+        server-addr: 119.3.62.74:8848
+        #ע��������
+        #        group:
+        #ע��������ռ�
+      #        namespace:
+      #����
+      config:
+        server-addr: 119.3.62.74:8848
+        prefix: ${spring.application.name}
+        file-extension: yaml
+        # ���鷽ʽ ����
+        group: DEV_GROUP
+        # ��ռ䷽ʽ �ռ�ID
+#        namespace:
+
+management:
+  # �˵��飨������飩
+  endpoints:
+    web:
+      exposure:
+        include: "*"
