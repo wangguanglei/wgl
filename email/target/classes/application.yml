@@ -1,0 +1,11 @@
+
+spring:
+  mail:
+    username: 877230620@qq.com
+    password: ofkmpadfoaqebfbd
+    host: smtp.qq.com
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true

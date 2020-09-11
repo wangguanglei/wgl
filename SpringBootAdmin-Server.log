@@ -1,0 +1,449 @@
+2020-08-14 15:50:56.728  INFO 19272 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] o.s.boot.SpringApplication               : No active profile set, falling back to default profiles: default
+2020-08-14 15:50:56.743  INFO 19272 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] o.s.boot.SpringApplication               : Started application in 1.045 seconds (JVM running for 364.261)
+2020-08-14 15:50:56.857  INFO 19272 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] o.s.c.e.event.RefreshEventListener       : Refresh keys changed: [logging.file.path, logging.file.name]
+2020-08-14 15:50:56.863  INFO 19272 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [notify-ok] dataId=admin, group=DEFAULT_GROUP, md5=e23b2839aa99994df917f5ff30484848, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@29c9d00 
+2020-08-14 15:50:56.863  INFO 19272 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [notify-listener] time cost=1168ms in ClientWorker, dataId=admin, group=DEFAULT_GROUP, md5=e23b2839aa99994df917f5ff30484848, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@29c9d00 
+2020-08-14 15:51:00.187  WARN 19272 --- [http-nio-8071-exec-6] o.s.b.actuate.mail.MailHealthIndicator   : Mail health check failed
+
+javax.mail.AuthenticationFailedException: 535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.5.jar:1.6.5]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.5.jar:1.6.5]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.5.jar:1.6.5]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.5.jar:1.6.5]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.testConnection(JavaMailSenderImpl.java:398) ~[spring-context-support-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.actuate.mail.MailHealthIndicator.doHealthCheck(MailHealthIndicator.java:42) ~[spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:95) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:43) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:108) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:119) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:105) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:83) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:70) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:81) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:70) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at sun.reflect.GeneratedMethodAccessor117.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_201]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) [spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:77) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:305) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:388) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at sun.reflect.GeneratedMethodAccessor112.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_201]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at de.codecentric.boot.admin.server.ui.web.servlet.HomepageForwardingFilter.doFilter(HomepageForwardingFilter.java:73) [spring-boot-admin-server-ui-2.3.0.jar:2.3.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_201]
+
+2020-08-14 15:51:14.849  INFO 12868 --- [main] com.example.demo.AdminApplication        : No active profile set, falling back to default profiles: default
+2020-08-14 15:51:15.370  WARN 12868 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+2020-08-14 15:51:15.373  WARN 12868 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2020-08-14 15:51:15.706  WARN 12868 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-08-14 15:51:15.812  INFO 12868 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4fc62a90-4c26-3295-89f4-d3e13baa1c1b
+2020-08-14 15:51:15.896  INFO 12868 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 15:51:15.897  INFO 12868 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 15:51:15.899  INFO 12868 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 15:51:15.900  INFO 12868 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 15:51:16.131  INFO 12868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8071 (http)
+2020-08-14 15:51:16.140  INFO 12868 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-14 15:51:16.141  INFO 12868 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-08-14 15:51:16.258  INFO 12868 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-14 15:51:16.259  INFO 12868 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1393 ms
+2020-08-14 15:51:16.999  INFO 12868 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-08-14 15:51:17.001  INFO 12868 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2020-08-14 15:51:17.005  INFO 12868 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-08-14 15:51:17.670  WARN 12868 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-14 15:51:17.670  INFO 12868 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-14 15:51:17.683  WARN 12868 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-14 15:51:17.684  INFO 12868 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-14 15:51:17.868  INFO 12868 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 15:51:17.981  WARN 12868 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-14 15:51:17.996  INFO 12868 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-08-14 15:51:20.061  INFO 12868 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-08-14 15:51:20.199  INFO 12868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8071 (http) with context path ''
+2020-08-14 15:51:20.319  INFO 12868 --- [Nacso-Watch-Task-Scheduler-1] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@admin -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8071#DEFAULT#DEFAULT_GROUP@@admin","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"serviceName":"admin","weight":1.0}]
+2020-08-14 15:51:20.324  INFO 12868 --- [Nacso-Watch-Task-Scheduler-1] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@admin -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8071#DEFAULT#DEFAULT_GROUP@@admin","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"serviceName":"admin","weight":1.0}]
+2020-08-14 15:51:20.646  INFO 12868 --- [main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.1.19","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8071,"scheduled":false,"serviceName":"DEFAULT_GROUP@@admin","stopped":false,"weight":1.0} to beat map.
+2020-08-14 15:51:20.649  INFO 12868 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@admin with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"weight":1.0}
+2020-08-14 15:51:20.868  INFO 12868 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP admin 192.168.1.19:8071 register finished
+2020-08-14 15:51:20.898  INFO 12868 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@service-01 -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8081#DEFAULT#DEFAULT_GROUP@@service-01","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8081,"serviceName":"service-01","weight":1.0}]
+2020-08-14 15:51:20.900  INFO 12868 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@service-01 -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8081#DEFAULT#DEFAULT_GROUP@@service-01","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8081,"serviceName":"service-01","weight":1.0}]
+2020-08-14 15:51:21.090  INFO 12868 --- [http-nio-8071-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-14 15:51:21.091  INFO 12868 --- [http-nio-8071-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-14 15:51:21.100  INFO 12868 --- [http-nio-8071-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-08-14 15:51:21.429  INFO 12868 --- [main] com.example.demo.AdminApplication        : Started AdminApplication in 9.609 seconds (JVM running for 11.324)
+2020-08-14 15:51:21.449  INFO 12868 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [subscribe] admin+DEFAULT_GROUP
+2020-08-14 15:51:21.450  INFO 12868 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [add-listener] ok, tenant=, dataId=admin, group=DEFAULT_GROUP, cnt=1
+2020-08-14 15:51:21.450  INFO 12868 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [subscribe] admin.yaml+DEFAULT_GROUP
+2020-08-14 15:51:21.451  INFO 12868 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [add-listener] ok, tenant=, dataId=admin.yaml, group=DEFAULT_GROUP, cnt=1
+2020-08-14 15:51:21.469  INFO 12868 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [polling-resp] config changed. dataId=admin, group=DEFAULT_GROUP
+2020-08-14 15:51:21.483  INFO 12868 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [data-received] dataId=admin, group=DEFAULT_GROUP, tenant=null, md5=0f37be169581f35148a7ad10781294c2, content=server:
+  # 服务端口
+  port: 8071
+spring:
+  cloud:
+    nacos:
+      # 服务注册中心
+      discovery:
+  ...
+2020-08-14 15:51:21.485  INFO 12868 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [notify-context] dataId=admin, group=DEFAULT_GROUP, md5=0f37be169581f35148a7ad10781294c2
+2020-08-14 15:51:26.973  INFO 4444 --- [main] com.example.demo.AdminApplication        : No active profile set, falling back to default profiles: default
+2020-08-14 15:51:27.475  WARN 4444 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+2020-08-14 15:51:27.478  WARN 4444 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2020-08-14 15:51:27.773  WARN 4444 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-08-14 15:51:27.873  INFO 4444 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=000d3313-8d04-33e4-8ea6-d96a142d7e9b
+2020-08-14 15:51:27.946  INFO 4444 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 15:51:27.946  INFO 4444 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 15:51:27.948  INFO 4444 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 15:51:27.950  INFO 4444 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 15:51:28.155  INFO 4444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8071 (http)
+2020-08-14 15:51:28.164  INFO 4444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-14 15:51:28.164  INFO 4444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-08-14 15:51:28.296  INFO 4444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-14 15:51:28.296  INFO 4444 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1309 ms
+2020-08-14 15:51:28.922  INFO 4444 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-08-14 15:51:28.923  INFO 4444 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2020-08-14 15:51:28.923  INFO 4444 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-08-14 15:51:29.467  WARN 4444 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-14 15:51:29.467  INFO 4444 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-14 15:51:29.470  WARN 4444 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-14 15:51:29.471  INFO 4444 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-14 15:51:29.624  INFO 4444 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 15:51:29.735  WARN 4444 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-14 15:51:29.749  INFO 4444 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-08-14 15:51:31.546  INFO 4444 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-08-14 15:51:31.657  INFO 4444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8071 (http) with context path ''
+2020-08-14 15:51:31.777  INFO 4444 --- [Nacso-Watch-Task-Scheduler-1] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@admin -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8071#DEFAULT#DEFAULT_GROUP@@admin","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"serviceName":"admin","weight":1.0}]
+2020-08-14 15:51:31.781  INFO 4444 --- [Nacso-Watch-Task-Scheduler-1] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@admin -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8071#DEFAULT#DEFAULT_GROUP@@admin","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"serviceName":"admin","weight":1.0}]
+2020-08-14 15:51:32.066  INFO 4444 --- [main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.1.19","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8071,"scheduled":false,"serviceName":"DEFAULT_GROUP@@admin","stopped":false,"weight":1.0} to beat map.
+2020-08-14 15:51:32.070  INFO 4444 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@admin with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"weight":1.0}
+2020-08-14 15:51:32.083  INFO 4444 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP admin 192.168.1.19:8071 register finished
+2020-08-14 15:51:32.110  INFO 4444 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@service-01 -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8081#DEFAULT#DEFAULT_GROUP@@service-01","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8081,"serviceName":"service-01","weight":1.0}]
+2020-08-14 15:51:32.111  INFO 4444 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@service-01 -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8081#DEFAULT#DEFAULT_GROUP@@service-01","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8081,"serviceName":"service-01","weight":1.0}]
+2020-08-14 15:51:32.460  INFO 4444 --- [http-nio-8071-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-14 15:51:32.461  INFO 4444 --- [http-nio-8071-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-14 15:51:32.466  INFO 4444 --- [http-nio-8071-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-08-14 15:51:32.549  INFO 4444 --- [main] com.example.demo.AdminApplication        : Started AdminApplication in 7.794 seconds (JVM running for 9.173)
+2020-08-14 15:51:32.569  INFO 4444 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [subscribe] admin+DEFAULT_GROUP
+2020-08-14 15:51:32.569  INFO 4444 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [add-listener] ok, tenant=, dataId=admin, group=DEFAULT_GROUP, cnt=1
+2020-08-14 15:51:32.569  INFO 4444 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [subscribe] admin.yaml+DEFAULT_GROUP
+2020-08-14 15:51:32.570  INFO 4444 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [add-listener] ok, tenant=, dataId=admin.yaml, group=DEFAULT_GROUP, cnt=1
+2020-08-14 15:58:58.570  INFO 18956 --- [main] com.example.demo.AdminApplication        : No active profile set, falling back to default profiles: default
+2020-08-14 15:58:59.264  WARN 18956 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+2020-08-14 15:58:59.267  WARN 18956 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2020-08-14 15:58:59.672  WARN 18956 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-08-14 15:58:59.783  INFO 18956 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=000d3313-8d04-33e4-8ea6-d96a142d7e9b
+2020-08-14 15:58:59.866  INFO 18956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 15:58:59.867  INFO 18956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 15:58:59.869  INFO 18956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 15:58:59.872  INFO 18956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 15:59:00.140  INFO 18956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8071 (http)
+2020-08-14 15:59:00.151  INFO 18956 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-14 15:59:00.151  INFO 18956 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-08-14 15:59:00.277  INFO 18956 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-14 15:59:00.277  INFO 18956 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1688 ms
+2020-08-14 15:59:00.938  INFO 18956 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-08-14 15:59:00.939  INFO 18956 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2020-08-14 15:59:00.940  INFO 18956 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-08-14 15:59:01.950  WARN 18956 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-14 15:59:01.954  INFO 18956 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-14 15:59:01.965  WARN 18956 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-14 15:59:01.965  INFO 18956 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-14 15:59:02.157  INFO 18956 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 15:59:02.289  WARN 18956 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-14 15:59:02.302  INFO 18956 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-08-14 15:59:04.456  INFO 18956 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-08-14 15:59:04.583  INFO 18956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8071 (http) with context path ''
+2020-08-14 15:59:04.700  INFO 18956 --- [Nacso-Watch-Task-Scheduler-1] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@admin -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8071#DEFAULT#DEFAULT_GROUP@@admin","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"serviceName":"admin","weight":1.0}]
+2020-08-14 15:59:04.706  INFO 18956 --- [Nacso-Watch-Task-Scheduler-1] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@admin -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8071#DEFAULT#DEFAULT_GROUP@@admin","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"serviceName":"admin","weight":1.0}]
+2020-08-14 15:59:05.540  INFO 18956 --- [main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.1.19","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8071,"scheduled":false,"serviceName":"DEFAULT_GROUP@@admin","stopped":false,"weight":1.0} to beat map.
+2020-08-14 15:59:05.559  INFO 18956 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@admin with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"weight":1.0}
+2020-08-14 15:59:05.652  INFO 18956 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP admin 192.168.1.19:8071 register finished
+2020-08-14 15:59:05.736  INFO 18956 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@service-01 -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8081#DEFAULT#DEFAULT_GROUP@@service-01","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8081,"serviceName":"service-01","weight":1.0}]
+2020-08-14 15:59:05.738  INFO 18956 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@service-01 -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8081#DEFAULT#DEFAULT_GROUP@@service-01","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8081,"serviceName":"service-01","weight":1.0}]
+2020-08-14 15:59:06.227  INFO 18956 --- [http-nio-8071-exec-9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-14 15:59:06.232  INFO 18956 --- [http-nio-8071-exec-9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-14 15:59:06.241  INFO 18956 --- [http-nio-8071-exec-9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-08-14 15:59:06.642  INFO 18956 --- [main] com.example.demo.AdminApplication        : Started AdminApplication in 10.695 seconds (JVM running for 11.923)
+2020-08-14 15:59:06.664  INFO 18956 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [subscribe] admin+DEFAULT_GROUP
+2020-08-14 15:59:06.665  INFO 18956 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [add-listener] ok, tenant=, dataId=admin, group=DEFAULT_GROUP, cnt=1
+2020-08-14 15:59:06.665  INFO 18956 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [subscribe] admin.yaml+DEFAULT_GROUP
+2020-08-14 15:59:06.665  INFO 18956 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [add-listener] ok, tenant=, dataId=admin.yaml, group=DEFAULT_GROUP, cnt=1
+2020-08-14 15:59:08.262  INFO 18956 --- [reactor-http-nio-2] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=2058cb2be439, version=0, registration=Registration(name=service-01, managementUrl=http://192.168.1.19:8081/actuator, healthUrl=http://192.168.1.19:8081/actuator/health, serviceUrl=http://192.168.1.19:8081, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2020-08-14T07:59:05.739Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://192.168.1.19:8081/actuator/health)}), buildVersion=null, tags=Tags(values={}))
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /192.168.1.19:8081
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ Request to GET health [DefaultWebClient]
+Stack trace:
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_201]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_201]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_201]
+
+2020-08-14 16:12:50.750  INFO 10216 --- [main] com.example.demo.AdminApplication        : No active profile set, falling back to default profiles: default
+2020-08-14 16:12:51.330  WARN 10216 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+2020-08-14 16:12:51.333  WARN 10216 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2020-08-14 16:12:51.640  WARN 10216 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-08-14 16:12:51.748  INFO 10216 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=000d3313-8d04-33e4-8ea6-d96a142d7e9b
+2020-08-14 16:12:51.829  INFO 10216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:12:51.830  INFO 10216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:12:51.831  INFO 10216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:12:51.832  INFO 10216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:12:52.052  INFO 10216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8071 (http)
+2020-08-14 16:12:52.062  INFO 10216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-14 16:12:52.062  INFO 10216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-08-14 16:12:52.194  INFO 10216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-14 16:12:52.194  INFO 10216 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1427 ms
+2020-08-14 16:12:52.928  INFO 10216 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-08-14 16:12:52.929  INFO 10216 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2020-08-14 16:12:52.931  INFO 10216 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-08-14 16:12:53.650  WARN 10216 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-14 16:12:53.651  INFO 10216 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-14 16:12:53.654  WARN 10216 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-14 16:12:53.655  INFO 10216 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-14 16:12:53.851  INFO 10216 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 16:12:53.980  WARN 10216 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-14 16:12:53.993  INFO 10216 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-08-14 16:12:56.180  INFO 10216 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-08-14 16:12:56.314  INFO 10216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8071 (http) with context path ''
+2020-08-14 16:12:56.470  INFO 10216 --- [Nacso-Watch-Task-Scheduler-1] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@admin -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8071#DEFAULT#DEFAULT_GROUP@@admin","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"serviceName":"admin","weight":1.0}]
+2020-08-14 16:12:56.474  INFO 10216 --- [Nacso-Watch-Task-Scheduler-1] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@admin -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8071#DEFAULT#DEFAULT_GROUP@@admin","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"serviceName":"admin","weight":1.0}]
+2020-08-14 16:12:56.489  INFO 10216 --- [http-nio-8071-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-14 16:12:56.489  INFO 10216 --- [http-nio-8071-exec-10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-14 16:12:56.498  INFO 10216 --- [http-nio-8071-exec-10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-08-14 16:12:56.882  INFO 10216 --- [main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.1.19","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8071,"scheduled":false,"serviceName":"DEFAULT_GROUP@@admin","stopped":false,"weight":1.0} to beat map.
+2020-08-14 16:12:56.885  INFO 10216 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@admin with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"weight":1.0}
+2020-08-14 16:12:56.902  INFO 10216 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP admin 192.168.1.19:8071 register finished
+2020-08-14 16:12:56.932  INFO 10216 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@service-01 -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8081#DEFAULT#DEFAULT_GROUP@@service-01","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8081,"serviceName":"service-01","weight":1.0}]
+2020-08-14 16:12:56.933  INFO 10216 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@service-01 -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8081#DEFAULT#DEFAULT_GROUP@@service-01","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8081,"serviceName":"service-01","weight":1.0}]
+2020-08-14 16:12:57.372  INFO 10216 --- [main] com.example.demo.AdminApplication        : Started AdminApplication in 9.671 seconds (JVM running for 11.281)
+2020-08-14 16:12:57.400  INFO 10216 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [subscribe] admin+DEFAULT_GROUP
+2020-08-14 16:12:57.401  INFO 10216 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [add-listener] ok, tenant=, dataId=admin, group=DEFAULT_GROUP, cnt=1
+2020-08-14 16:12:57.402  INFO 10216 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [subscribe] admin.yaml+DEFAULT_GROUP
+2020-08-14 16:12:57.402  INFO 10216 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [add-listener] ok, tenant=, dataId=admin.yaml, group=DEFAULT_GROUP, cnt=1
+2020-08-14 16:12:59.155  INFO 10216 --- [reactor-http-nio-2] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=2058cb2be439, version=0, registration=Registration(name=service-01, managementUrl=http://192.168.1.19:8081/actuator, healthUrl=http://192.168.1.19:8081/actuator/health, serviceUrl=http://192.168.1.19:8081, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2020-08-14T08:12:56.935Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://192.168.1.19:8081/actuator/health)}), buildVersion=null, tags=Tags(values={}))
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /192.168.1.19:8081
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ Request to GET health [DefaultWebClient]
+Stack trace:
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_201]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_201]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_201]
+
+2020-08-14 16:13:13.022  INFO 10216 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : removed ips(1) service: DEFAULT_GROUP@@service-01 -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8081#DEFAULT#DEFAULT_GROUP@@service-01","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8081,"serviceName":"service-01","weight":1.0}]
+2020-08-14 16:13:13.024  INFO 10216 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@service-01 -> []
+2020-08-14 16:13:27.131  INFO 10216 --- [Nacso-Watch-Task-Scheduler-1] d.c.b.a.s.c.d.InstanceDiscoveryListener  : Instance '2058cb2be439' missing in DiscoveryClient services and will be removed.
+2020-08-14 16:13:40.160  INFO 10216 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@service-01 -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8081#DEFAULT#DEFAULT_GROUP@@service-01","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8081,"serviceName":"service-01","weight":1.0}]
+2020-08-14 16:13:40.161  INFO 10216 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@service-01 -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8081#DEFAULT#DEFAULT_GROUP@@service-01","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8081,"serviceName":"service-01","weight":1.0}]
+2020-08-14 16:19:28.653  INFO 10216 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [polling-resp] config changed. dataId=admin, group=DEFAULT_GROUP
+2020-08-14 16:19:28.678  INFO 10216 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [data-received] dataId=admin, group=DEFAULT_GROUP, tenant=null, md5=a330e93cb922990adfcd6e3f2a6187a9, content=server:
+  # 服务端口
+  port: 8071
+spring:
+  cloud:
+    nacos:
+      # 服务注册中心
+      discovery:
+  ...
+2020-08-14 16:19:28.679  INFO 10216 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [notify-context] dataId=admin, group=DEFAULT_GROUP, md5=a330e93cb922990adfcd6e3f2a6187a9
+2020-08-14 16:19:29.172  INFO 10216 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:19:30.101  WARN 10216 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[admin.yaml] & group[DEFAULT_GROUP]
+2020-08-14 16:19:30.102  INFO 10216 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='admin.yaml,DEFAULT_GROUP'}, NacosPropertySource {name='admin,DEFAULT_GROUP'}]}
+2020-08-14 16:19:30.104  INFO 10216 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] o.s.boot.SpringApplication               : No active profile set, falling back to default profiles: default
+2020-08-14 16:19:30.114  INFO 10216 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] o.s.boot.SpringApplication               : Started application in 1.432 seconds (JVM running for 404.024)
+2020-08-14 16:19:30.208  INFO 10216 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] o.s.c.e.event.RefreshEventListener       : Refresh keys changed: [logging.file.path, spring.mail.host, logging.file.name, spring.boot.admin.notify.mail.to, spring.boot.admin.notify.mail.enabled, spring.boot.admin.notify.mail.from]
+2020-08-14 16:19:30.210  INFO 10216 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [notify-ok] dataId=admin, group=DEFAULT_GROUP, md5=a330e93cb922990adfcd6e3f2a6187a9, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@5fae7ddc 
+2020-08-14 16:19:30.210  INFO 10216 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [notify-listener] time cost=1531ms in ClientWorker, dataId=admin, group=DEFAULT_GROUP, md5=a330e93cb922990adfcd6e3f2a6187a9, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@5fae7ddc 
+2020-08-14 16:31:01.952  INFO 24236 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] o.s.boot.SpringApplication               : No active profile set, falling back to default profiles: default
+2020-08-14 16:31:01.964  INFO 24236 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] o.s.boot.SpringApplication               : Started application in 1.037 seconds (JVM running for 450.038)
+2020-08-14 16:31:02.063  INFO 24236 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] o.s.c.e.event.RefreshEventListener       : Refresh keys changed: [logging.file.path, logging.file.name]
+2020-08-14 16:31:02.064  INFO 24236 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [notify-ok] dataId=admin, group=DEFAULT_GROUP, md5=4755dca9222cf411f045ab7f51586e9e, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@311423d4 
+2020-08-14 16:31:02.064  INFO 24236 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [notify-listener] time cost=1138ms in ClientWorker, dataId=admin, group=DEFAULT_GROUP, md5=4755dca9222cf411f045ab7f51586e9e, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@311423d4 
+2020-08-14 16:31:13.700  INFO 25564 --- [main] com.example.demo.AdminApplication        : No active profile set, falling back to default profiles: default
+2020-08-14 16:31:14.340  WARN 25564 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+2020-08-14 16:31:14.342  WARN 25564 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2020-08-14 16:31:14.684  WARN 25564 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-08-14 16:31:14.827  INFO 25564 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4fc62a90-4c26-3295-89f4-d3e13baa1c1b
+2020-08-14 16:31:14.928  INFO 25564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:31:14.930  INFO 25564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:31:14.934  INFO 25564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:31:14.936  INFO 25564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:31:15.229  INFO 25564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8071 (http)
+2020-08-14 16:31:15.238  INFO 25564 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-14 16:31:15.238  INFO 25564 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-08-14 16:31:15.374  INFO 25564 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-14 16:31:15.374  INFO 25564 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1660 ms
+2020-08-14 16:31:16.177  INFO 25564 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-08-14 16:31:16.178  INFO 25564 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2020-08-14 16:31:16.180  INFO 25564 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-08-14 16:31:16.841  WARN 25564 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-14 16:31:16.842  INFO 25564 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-14 16:31:16.846  WARN 25564 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-14 16:31:16.846  INFO 25564 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-14 16:31:17.012  INFO 25564 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 16:31:17.146  WARN 25564 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-14 16:31:17.162  INFO 25564 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-08-14 16:31:19.099  INFO 25564 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-08-14 16:31:19.221  INFO 25564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8071 (http) with context path ''
+2020-08-14 16:31:19.339  INFO 25564 --- [Nacso-Watch-Task-Scheduler-1] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@admin -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8071#DEFAULT#DEFAULT_GROUP@@admin","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"serviceName":"admin","weight":1.0}]
+2020-08-14 16:31:19.343  INFO 25564 --- [Nacso-Watch-Task-Scheduler-1] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@admin -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8071#DEFAULT#DEFAULT_GROUP@@admin","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"serviceName":"admin","weight":1.0}]
+2020-08-14 16:31:19.663  INFO 25564 --- [main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.1.19","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8071,"scheduled":false,"serviceName":"DEFAULT_GROUP@@admin","stopped":false,"weight":1.0} to beat map.
+2020-08-14 16:31:19.667  INFO 25564 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@admin with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"weight":1.0}
+2020-08-14 16:31:19.680  INFO 25564 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP admin 192.168.1.19:8071 register finished
+2020-08-14 16:31:20.040  INFO 25564 --- [http-nio-8071-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-14 16:31:20.040  INFO 25564 --- [http-nio-8071-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-14 16:31:20.045  INFO 25564 --- [http-nio-8071-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-08-14 16:31:20.138  INFO 25564 --- [main] com.example.demo.AdminApplication        : Started AdminApplication in 8.96 seconds (JVM running for 10.167)
+2020-08-14 16:31:20.158  INFO 25564 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [subscribe] admin+DEFAULT_GROUP
+2020-08-14 16:31:20.158  INFO 25564 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [add-listener] ok, tenant=, dataId=admin, group=DEFAULT_GROUP, cnt=1
+2020-08-14 16:31:20.159  INFO 25564 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [subscribe] admin.yaml+DEFAULT_GROUP
+2020-08-14 16:31:20.159  INFO 25564 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [add-listener] ok, tenant=, dataId=admin.yaml, group=DEFAULT_GROUP, cnt=1
+2020-08-14 16:31:59.572  INFO 25564 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [polling-resp] config changed. dataId=admin, group=DEFAULT_GROUP
+2020-08-14 16:31:59.588  INFO 25564 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [data-received] dataId=admin, group=DEFAULT_GROUP, tenant=null, md5=91c7809c09a4282b9ca37f8005afc2e2, content=server:
+  # 服务端口
+  port: 8071
+spring:
+  cloud:
+    nacos:
+      # 服务注册中心
+      discovery:
+  ...
+2020-08-14 16:31:59.589  INFO 25564 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [notify-context] dataId=admin, group=DEFAULT_GROUP, md5=91c7809c09a4282b9ca37f8005afc2e2
+2020-08-14 16:32:00.111  INFO 25564 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:32:00.583  WARN 25564 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[admin.yaml] & group[DEFAULT_GROUP]
+2020-08-14 16:32:00.583  INFO 25564 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='admin.yaml,DEFAULT_GROUP'}, NacosPropertySource {name='admin,DEFAULT_GROUP'}]}
+2020-08-14 16:32:00.590  INFO 25564 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] o.s.boot.SpringApplication               : No active profile set, falling back to default profiles: default
+2020-08-14 16:32:00.600  INFO 25564 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] o.s.boot.SpringApplication               : Started application in 1.007 seconds (JVM running for 50.629)
+2020-08-14 16:32:00.690  INFO 25564 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] o.s.c.e.event.RefreshEventListener       : Refresh keys changed: [logging.file.path]
+2020-08-14 16:32:00.690  INFO 25564 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [notify-ok] dataId=admin, group=DEFAULT_GROUP, md5=91c7809c09a4282b9ca37f8005afc2e2, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@420f33b2 
+2020-08-14 16:32:00.692  INFO 25564 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [notify-listener] time cost=1102ms in ClientWorker, dataId=admin, group=DEFAULT_GROUP, md5=91c7809c09a4282b9ca37f8005afc2e2, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@420f33b2 
+2020-08-14 16:32:50.725  INFO 10112 --- [main] com.example.demo.AdminApplication        : No active profile set, falling back to default profiles: default
+2020-08-14 16:32:51.282  WARN 10112 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+2020-08-14 16:32:51.286  WARN 10112 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2020-08-14 16:32:51.725  WARN 10112 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-08-14 16:32:51.866  INFO 10112 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4fc62a90-4c26-3295-89f4-d3e13baa1c1b
+2020-08-14 16:32:51.954  INFO 10112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:32:51.955  INFO 10112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:32:51.957  INFO 10112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:32:51.960  INFO 10112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:32:52.186  INFO 10112 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8071 (http)
+2020-08-14 16:32:52.196  INFO 10112 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-14 16:32:52.197  INFO 10112 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-08-14 16:32:52.354  INFO 10112 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-14 16:32:52.354  INFO 10112 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1613 ms
+2020-08-14 16:32:53.042  INFO 10112 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-08-14 16:32:53.043  INFO 10112 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2020-08-14 16:32:53.044  INFO 10112 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2020-08-14 16:32:53.651  WARN 10112 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-14 16:32:53.652  INFO 10112 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-14 16:32:53.656  WARN 10112 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-14 16:32:53.656  INFO 10112 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-14 16:32:53.811  INFO 10112 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 16:32:53.970  WARN 10112 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-14 16:32:53.984  INFO 10112 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-08-14 16:32:55.973  INFO 10112 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-08-14 16:32:56.110  INFO 10112 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8071 (http) with context path ''
+2020-08-14 16:32:56.255  INFO 10112 --- [Nacso-Watch-Task-Scheduler-1] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@admin -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8071#DEFAULT#DEFAULT_GROUP@@admin","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"serviceName":"admin","weight":1.0}]
+2020-08-14 16:32:56.261  INFO 10112 --- [Nacso-Watch-Task-Scheduler-1] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@admin -> [{"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.1.19#8071#DEFAULT#DEFAULT_GROUP@@admin","ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"serviceName":"admin","weight":1.0}]
+2020-08-14 16:32:56.706  INFO 10112 --- [main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.1.19","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8071,"scheduled":false,"serviceName":"DEFAULT_GROUP@@admin","stopped":false,"weight":1.0} to beat map.
+2020-08-14 16:32:56.712  INFO 10112 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@admin with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.1.19","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8071,"weight":1.0}
+2020-08-14 16:32:56.734  INFO 10112 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP admin 192.168.1.19:8071 register finished
+2020-08-14 16:32:57.107  INFO 10112 --- [http-nio-8071-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-14 16:32:57.108  INFO 10112 --- [http-nio-8071-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-14 16:32:57.114  INFO 10112 --- [http-nio-8071-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-08-14 16:32:57.215  INFO 10112 --- [main] com.example.demo.AdminApplication        : Started AdminApplication in 8.722 seconds (JVM running for 10.098)
+2020-08-14 16:32:57.237  INFO 10112 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [subscribe] admin+DEFAULT_GROUP
+2020-08-14 16:32:57.238  INFO 10112 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [add-listener] ok, tenant=, dataId=admin, group=DEFAULT_GROUP, cnt=1
+2020-08-14 16:32:57.239  INFO 10112 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [subscribe] admin.yaml+DEFAULT_GROUP
+2020-08-14 16:32:57.239  INFO 10112 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [add-listener] ok, tenant=, dataId=admin.yaml, group=DEFAULT_GROUP, cnt=1
+2020-08-14 16:34:16.950  INFO 10112 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [polling-resp] config changed. dataId=admin, group=DEFAULT_GROUP
+2020-08-14 16:34:16.974  INFO 10112 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.n.client.config.impl.ClientWorker    : [fixed-119.3.62.74_8848] [data-received] dataId=admin, group=DEFAULT_GROUP, tenant=null, md5=c1ce513f7e53c287f802ee39f7d6c723, content=server:
+  # 服务端口
+  port: 8071
+spring:
+  cloud:
+    nacos:
+      # 服务注册中心
+      discovery:
+  ...
+2020-08-14 16:34:16.976  INFO 10112 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.nacos.client.config.impl.CacheData   : [fixed-119.3.62.74_8848] [notify-context] dataId=admin, group=DEFAULT_GROUP, md5=c1ce513f7e53c287f802ee39f7d6c723
+2020-08-14 16:34:17.478  INFO 10112 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-14 16:34:17.940  WARN 10112 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[admin.yaml] & group[DEFAULT_GROUP]
+2020-08-14 16:34:17.942  INFO 10112 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-119.3.62.74_8848] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='admin.yaml,DEFAULT_GROUP'}, NacosPropertySource {name='admin,DEFAULT_GROUP'}]}

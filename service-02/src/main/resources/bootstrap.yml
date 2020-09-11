@@ -1,0 +1,36 @@
+
+spring:
+  application:
+    # 服务名
+    name: service-02
+  cloud:
+    nacos:
+      # 服务注册中心
+      discovery:
+        server-addr: 119.3.62.74:8848
+        metadata:
+          management:
+            context-path: ${server.servlet.context-path}/actuator
+      #        #注册所属组
+      ##        group:
+      #        #注册所属表空间
+      ##        namespace:
+      #      #配置
+      config:
+        server-addr: 119.3.62.74:8848
+        prefix: ${spring.application.name}
+        file-extension: yaml
+  redis:
+    host:
+#        # 分组方式 组名
+#        group: DEV_GROUP
+#        # 表空间方式 空间ID
+#
+##        namespace:
+#
+#management:
+#  # 端点检查（健康检查）
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"

@@ -1,0 +1,22 @@
+
+spring:
+  application:
+    # 服务名
+    name: admin
+  cloud:
+    nacos:
+      # 服务注册中心
+      discovery:
+        server-addr: 119.3.62.74:8848
+        metadata:
+          management:
+            context-path: ${server.servlet.context-path}/actuator
+      config:
+        server-addr: 119.3.62.74:8848
+        prefix: ${spring.application.name}
+        file-extension: yaml
+#        # 分组方式 组名
+#        group: DEV_GROUP
+#        # 表空间方式 空间ID
+#
+##        namespace:
