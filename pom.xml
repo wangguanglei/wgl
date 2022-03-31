@@ -30,8 +30,7 @@
         <com.alibaba.nacos.version>2.2.0.RELEASE</com.alibaba.nacos.version>
         <com.alibaba.gateway.version>2.2.2.RELEASE</com.alibaba.gateway.version>
         <com.alibaba.hystrix.version>2.2.2.RELEASE</com.alibaba.hystrix.version>
-        <org.springframework.boot.spring-boot-starter-web.version>2.2.6.RELEASE
-        </org.springframework.boot.spring-boot-starter-web.version>
+        <org.springframework.boot.spring-boot-starter-web.version>2.5.12</org.springframework.boot.spring-boot-starter-web.version>
         <admin.version>2.3.0</admin.version>
     </properties>
 
